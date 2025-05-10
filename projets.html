@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réalisations - SysForge.fr</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/logo.svg">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-user-astronaut logo-icon"></i>
+                SysForge<span class="logo-accent">.fr</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projets.html" class="active">Réalisations</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="language-selector">
+                    <a href="#" data-lang="fr" class="active">FR</a>
+                    <a href="en/projects.html" data-lang="en">EN</a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Mes Réalisations</h1>
+            <p>Découvrez mon projet phare</p>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="container">
+            <div class="project-card featured">
+                <div class="project-image">
+                    <img src="img/oraka-project.jpg" alt="Oraka - Plateforme DeFi IA">
+                </div>
+                <div class="project-content">
+                    <h3>Oraka</h3>
+                    <p class="project-type">Plateforme DeFi IA sur Solana</p>
+                    <p class="project-description">
+                        Oraka est une plateforme décentralisée innovante qui combine la finance décentralisée (DeFi) et l'intelligence artificielle sur la blockchain Solana. Ce projet révolutionne la gestion DeFi avec des outils d'analyse de portefeuille avancés, des fonctionnalités de sécurité et des recommandations stratégiques alimentées par l'IA.
+                    </p>
+                    <p class="project-description">
+                        <strong>Architecture technique :</strong> La plateforme est conçue avec une architecture microservices déployée sur une infrastructure Kubernetes hautement disponible. Les environnements de développement, staging et production utilisent des conteneurs Docker orchestrés via Helm charts personnalisés.
+                    </p>
+                    <p class="project-description">
+                        <strong>Backend :</strong> Développé principalement en Rust pour les programmes on-chain Solana avec le framework Anchor, et Node.js pour les services off-chain. Utilisation de PostgreSQL pour le stockage persistant des données et Redis pour le caching et les files d'attente distribuées.
+                    </p>
+                    <p class="project-description">
+                        <strong>Frontend :</strong> Interface utilisateur moderne conçue avec React et Next.js, utilisant TypeScript pour une fiabilité accrue. Implémentation de Tailwind CSS pour un design réactif et élégant, avec un état global géré par Zustand et React Query pour les requêtes data.
+                    </p>
+                    <p class="project-description">
+                        <strong>DevOps :</strong> Pipeline CI/CD complet avec GitHub Actions automatisant les tests, les déploiements et les analyses de sécurité. Infrastructure as Code gérée par Terraform sur AWS. Monitoring et observabilité assurés par Grafana, Prometheus et Loki.
+                    </p>
+                    <div class="project-tech">
+                        <span>Linux</span>
+                        <span>Rust</span>
+                        <span>Solana</span>
+                        <span>Node.js</span>
+                        <span>PostgreSQL</span>
+                        <span>Redis</span>
+                        <span>Docker</span>
+                        <span>Kubernetes</span>
+                        <span>Terraform</span>
+                        <span>React</span>
+                        <span>TypeScript</span>
+                        <span>Next.js</span>
+                        <span>Tailwind</span>
+                        <span>GitHub Actions</span>
+                        <span>AWS</span>
+                        <span>Grafana</span>
+                    </div>
+                    <a href="https://oraka.app/" target="_blank" class="btn btn-primary btn-sm">Visiter Oraka</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Envie de collaborer sur votre prochain projet?</h2>
+            <p>Contactez-moi pour échanger sur vos idées et besoins techniques.</p>
+            <a href="contact.html" class="btn btn-primary">Discutons de votre projet</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SysForge.fr - Tous droits réservés | SIREN : 820464261</p>
+            <p><a href="mentions-legales.html">Mentions légales</a></p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

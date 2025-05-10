@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - SysForge.fr</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../img/logo.svg">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-user-astronaut logo-icon"></i>
+                SysForge<span class="logo-accent">.fr</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="language-selector">
+                    <a href="../projets.html" data-lang="fr">FR</a>
+                    <a href="#" data-lang="en" class="active">EN</a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>My Projects</h1>
+            <p>Discover my flagship project</p>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="container">
+            <div class="project-card featured">
+                <div class="project-image">
+                    <img src="../img/oraka-project.jpg" alt="Oraka - AI DeFi Platform">
+                </div>
+                <div class="project-content">
+                    <h3>Oraka</h3>
+                    <p class="project-type">AI DeFi Platform on Solana</p>
+                    <p class="project-description">
+                        Oraka is an innovative decentralized platform that combines decentralized finance (DeFi) and artificial intelligence on the Solana blockchain. This project revolutionizes DeFi management with advanced portfolio analysis tools, security features, and strategic recommendations powered by AI.
+                    </p>
+                    <p class="project-description">
+                        <strong>Technical architecture:</strong> The platform is designed with a microservices architecture deployed on a highly available Kubernetes infrastructure. Development, staging, and production environments use Docker containers orchestrated via custom Helm charts.
+                    </p>
+                    <p class="project-description">
+                        <strong>Backend:</strong> Primarily developed in Rust for Solana on-chain programs with the Anchor framework, and Node.js for off-chain services. Uses PostgreSQL for persistent data storage and Redis for caching and distributed queues.
+                    </p>
+                    <p class="project-description">
+                        <strong>Frontend:</strong> Modern user interface designed with React and Next.js, using TypeScript for increased reliability. Implementation of Tailwind CSS for responsive and elegant design, with global state managed by Zustand and React Query for data requests.
+                    </p>
+                    <p class="project-description">
+                        <strong>DevOps:</strong> Complete CI/CD pipeline with GitHub Actions automating tests, deployments, and security analyses. Infrastructure as Code managed by Terraform on AWS. Monitoring and observability ensured by Grafana, Prometheus, and Loki.
+                    </p>
+                    <div class="project-tech">
+                        <span>Linux</span>
+                        <span>Rust</span>
+                        <span>Solana</span>
+                        <span>Node.js</span>
+                        <span>PostgreSQL</span>
+                        <span>Redis</span>
+                        <span>Docker</span>
+                        <span>Kubernetes</span>
+                        <span>Terraform</span>
+                        <span>React</span>
+                        <span>TypeScript</span>
+                        <span>Next.js</span>
+                        <span>Tailwind</span>
+                        <span>GitHub Actions</span>
+                        <span>AWS</span>
+                        <span>Grafana</span>
+                    </div>
+                    <a href="https://oraka.app/" target="_blank" class="btn btn-primary btn-sm">Visit Oraka</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Want to collaborate on your next project?</h2>
+            <p>Contact me to discuss your ideas and technical needs.</p>
+            <a href="contact.html" class="btn btn-primary">Let's discuss your project</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SysForge.fr - All rights reserved | SIREN: 820464261</p>
+            <p><a href="legal.html">Legal Notice</a></p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 

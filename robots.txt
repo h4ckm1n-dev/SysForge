@@ -1,0 +1,15 @@
+# robots.txt pour SysForge.fr
+User-agent: *
+Allow: /
+Allow: /en/
+Allow: /services.html
+Allow: /projets.html
+Allow: /contact.html
+Allow: /mentions-legales.html
+Allow: /en/services.html
+Allow: /en/projects.html
+Allow: /en/contact.html
+Allow: /en/legal.html
+
+# Plan du site
+Sitemap: https://sysforge.fr/sitemap.xml 

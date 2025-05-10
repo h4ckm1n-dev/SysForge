@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - SysForge.fr</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../img/logo.svg">
+    <style>
+        .contact-hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 150px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-hero::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect x="0" y="0" width="50" height="50" fill="rgba(255,255,255,0.03)"/><rect x="50" y="50" width="50" height="50" fill="rgba(255,255,255,0.03)"/></svg>');
+            background-size: 30px;
+            opacity: 0.5;
+        }
+
+        .contact-hero h1 {
+            font-size: 4.5rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-hero p {
+            font-size: 1.5rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .contact-card-container {
+            margin-top: -80px;
+            position: relative;
+            z-index: 10;
+            padding-bottom: 80px;
+        }
+
+        .contact-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            padding: 0;
+            overflow: hidden;
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-channels {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px;
+            padding: 50px;
+        }
+
+        .contact-channel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+            border-radius: 16px;
+            background: var(--bg-color);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-channel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .contact-channel:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-channel:hover::before {
+            transform: scaleX(1);
+        }
+
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            height: 80px;
+            width: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(30, 64, 175, 0.1));
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .contact-channel:hover .contact-icon {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        .contact-channel h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .contact-channel a {
+            color: var(--text-color);
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .contact-channel a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .contact-channel:hover a {
+            color: var(--primary-color);
+        }
+
+        .contact-channel:hover a::after {
+            width: 100%;
+        }
+
+        .availability-section {
+            background: linear-gradient(135deg, var(--section-bg-alt), var(--bg-color));
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .availability-section h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .availability-section p {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .availability-section .btn {
+            font-size: 1.1rem;
+            padding: 15px 35px;
+        }
+
+        .availability-section i {
+            margin-right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .contact-channels {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-hero h1 {
+                font-size: 3rem;
+            }
+            
+            .contact-hero p {
+                font-size: 1.2rem;
+            }
+            
+            .availability-section h2 {
+                font-size: 2.5rem;
+            }
+            
+            .availability-section p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-user-astronaut logo-icon"></i>
+                SysForge<span class="logo-accent">.fr</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+                <div class="language-selector">
+                    <a href="../contact.html" data-lang="fr">FR</a>
+                    <a href="#" data-lang="en" class="active">EN</a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Let's Connect</h1>
+            <p>Let's discuss your project and find the best technical solutions together</p>
+        </div>
+    </section>
+
+    <section class="contact-card-container">
+        <div class="container">
+            <div class="contact-card">
+                <div class="contact-channels">
+                    <div class="contact-channel">
+                        <div class="contact-icon">
+                            <i class="far fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <a href="mailto:mayer.julien22@gmail.com">mayer.julien22@gmail.com</a>
+                    </div>
+                    
+                    <div class="contact-channel">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>WhatsApp</h3>
+                        <a href="https://wa.me/33783531926">+33 7 83 53 19 26</a>
+                    </div>
+                    
+                    <div class="contact-channel">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <h3>LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/julien-mayer-32850b75/" target="_blank" class="btn btn-secondary btn-sm">Follow me on LinkedIn</a>
+                    </div>
+                    
+                    <div class="contact-channel">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <h3>GitHub</h3>
+                        <a href="https://github.com/h4ckm1n-dev" target="_blank" class="btn btn-secondary btn-sm">View my GitHub profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SysForge.fr - All rights reserved | SIREN: 820464261</p>
+            <p><a href="legal.html">Legal Notice</a></p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 

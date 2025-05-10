@@ -19,8 +19,8 @@
     --box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
     --skill-bg: #f3f4f6;
     --card-hover: #f3f4f6;
-    --footer-bg: #111827;
-    --footer-text: #f9fafb;
+    --footer-bg: #f9fafb; /* Modifié pour un fond blanc en mode clair */
+    --footer-text: #111827; /* Changé pour un texte sombre sur fond clair */
     --section-bg-alt: #f3f4f6;
     
     /* Nouvelles variables pour la typographie */
@@ -72,8 +72,8 @@ body.light-theme {
     --shadow-color: rgba(0, 0, 0, 0.1);
     --skill-bg: #f3f4f6;
     --card-hover: #f3f4f6;
-    --footer-bg: #111827;
-    --footer-text: #f9fafb;
+    --footer-bg: #f9fafb; /* Modifié pour un fond blanc en mode clair */
+    --footer-text: #111827; /* Changé pour un texte sombre sur fond clair */
     --section-bg-alt: #f3f4f6;
 }
 
